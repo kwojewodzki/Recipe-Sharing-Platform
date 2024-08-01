@@ -3,3 +3,6 @@ pyjwt
 passlib[bcrypt]
 sqlalchemy
 python-decouple
+psycopg2
+python-dotenv
+alembic
