@@ -2,6 +2,8 @@ from logging.config import fileConfig
 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
+from sqlmodel import SQLModel
+from src.models import *
 
 from alembic import context
 
@@ -27,8 +29,8 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 
-from src import models
-target_metadata = models.Base.metadata
+from src.models import SQLModel
+target_metadata = SQLModel.metadata
 
 
 # other values from the config, defined by the needs of env.py,

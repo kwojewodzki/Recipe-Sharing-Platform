@@ -3,14 +3,15 @@ from fastapi import FastAPI
 from database import engine
 import models
 
-models.Base.metadata.create_all(bind=engine)
+from database import get_session, init_db
+
 
 app = FastAPI()
 
 
-@app.get("/")
+@app.get("/ping")
 def read_root():
-    return {"Hello": "World"}
+    return {"Ping": "Pong!"}
 
 
 @app.get("/items/{item_id}")

@@ -1,7 +1,7 @@
 fastapi
 pyjwt
 passlib[bcrypt]
-sqlalchemy
+sqlmodel
 python-decouple
 psycopg2
 python-dotenv
