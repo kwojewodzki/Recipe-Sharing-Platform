@@ -1,8 +1,8 @@
-fastapi
-pyjwt
-passlib[bcrypt]
-sqlmodel
-python-decouple
+django
+djangorestframework
+pyyaml
+requests
+django-cors-headers
+drf_yasg
 psycopg2
 python-dotenv
-alembic
