@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from rest_framework import views, permissions
+from rest_framework import views, permissions, generics
 from rest_framework.response import Response
+
+from recipes.models import Recipe
+from recipes.serializers import RecipeSerializer
 # Create your views here.
 
-
-class LoginView(views.APIView):
-    
-    def get(self, request, *args, **kwargs):
-        return Response({'message': 'Login here'})
+class RecipesView(generics.ListCreateAPIView):
+    queryset = Recipe.objects.all()
+    serializer_class = RecipeSerializer
